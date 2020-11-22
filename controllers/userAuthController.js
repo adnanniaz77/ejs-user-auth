@@ -1,5 +1,8 @@
+const User = require('../model/User')
+
 module.exports.home_get = (req, res) => {
-    res.render('home')
+    res.render('home');
+    console.log("hi")
 }
 
 module.exports.register_get = (req, res) => {
