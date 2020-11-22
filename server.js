@@ -4,7 +4,6 @@ const PORT = process.env.PORT || 5001;
 require('dotenv').config();
 
 // view engine
-app.use(express.static(__dirname + '/public'));
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
 
@@ -15,6 +14,8 @@ mongoose.connect(process.env.DB_URI, {
     useFindAndModify: true,
     useNewUrlParser: true
 })
+.then(() => console.log('Connected to DB'))
+.catch(err => console.log(err.message))
 
 // Routes
 app.get('/', (req, res) => {

@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container">
+    <div class="form">
+        <h2>Login to your account</h2>
+        <form id="loginForm">
+            <label>Username</label>
+            <input 
+                type="text" 
+                title="username" 
+                placeholder="username" 
+                required 
+            />
+    
+            <label>Password</label>
+            <input 
+                type="password" 
+                title="password" 
+                placeholder="password" 
+                required
+            />
+    
+            <button type="submit" class="btn">Login</button>
+    
+            <a class="forgot" href="#">Forgot Username?</a>
+        </form>
+    </div><!--end log form -->
+</div>
+
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,50 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container">
+    <div class="form">
+        <h2>Register new account</h2>
+        <form id="loginForm">
+            <label>Username</label>
+            <input 
+                type="text" 
+                title="username" 
+                placeholder="username"
+                minlength="6" 
+                required
+            />
+
+            <label>Email</label>
+            <input 
+                type="email" 
+                title="email" 
+                placeholder="email"
+                minlength="6"
+                required
+            />
+    
+            <label>Password</label>
+            <input 
+                type="password" 
+                title="password" 
+                placeholder="password"
+                minlength="6"  
+                required
+            />
+
+            <label>Confirm Password</label>
+            <input 
+                type="password" 
+                title="confirm password" 
+                placeholder="confirm password"
+                minlength="6"  
+                required
+            />
+    
+            <button type="submit" class="btn">Register</button>
+    
+            <a class="forgot" href="#">Back to login</a>
+        </form>
+    </div><!--end log form -->
+</div>
+
+<%- include('./partials/footer.ejs') %>
