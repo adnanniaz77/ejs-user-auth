@@ -17,9 +17,8 @@ mongoose.connect(process.env.DB_URI, {
 .then(() => console.log('Connected to DB'))
 .catch(err => console.log(err.message))
 
-// Routes
-app.get('/', (req, res) => {
-    res.render('home')
-})
+// user-auth-routes
+const authRoutes = require('./routes/userAuthRoutes')
+app.use(authRoutes)
 
 app.listen(PORT, () => { console.log('listening at http://localhost:' + PORT)});
