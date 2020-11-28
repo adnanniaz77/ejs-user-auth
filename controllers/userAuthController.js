@@ -67,13 +67,13 @@ module.exports.register_post = async(req, res) => {
     } 
     catch (err) {
         const error = handleError(err)
-        res.status(400).send({Error: "user not created", error})
+        res.status(400).send({Error: error})
     }
 }
 
 /* 
 ------------------------------ 
-          POST "login" user
+        POST "login" user
 ------------------------------
 */
 
