@@ -6,8 +6,8 @@ require('dotenv').config();
 app.use(express.json())
 
 // view engine
-app.use(express.static('public'))
 app.set('view engine', 'ejs')
+app.use(express.static('public'))
 
 // Mongodb connection
 const mongoose = require('mongoose');

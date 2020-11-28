@@ -2,22 +2,22 @@ const express = require('express');
 const router = express.Router();
 const userAuthController = require('../controllers/userAuthController')
 
-// get homepage
+// GET "homepage" Route
 router.get('/', userAuthController.home_get)
 
-// get the login page
+// GET "login" Route
 router.get('/login', userAuthController.login_get);
 
-// get the register page
+// GET "register" Route
 router.get('/register', userAuthController.register_get);
 
-// get the dashboard
+// GET "dashboard" Route
 router.get('/dashboard', userAuthController.dashboard_get);
 
-// user login
+// POST login Route
 router.post('/login', userAuthController.login_post);
 
-// user register new
+// POST register new Route
 router.post('/register', userAuthController.register_post);
 
 module.exports = router;
